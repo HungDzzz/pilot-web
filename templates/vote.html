@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vote</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+    <div id="root">
+        <form action="" method="POST">
+            <div>{{ p.question }}</div>
+            <!-- the <ul> la dau cham o dau, <ol> la so -->
+            <ol>
+                {% for option in p.options %}
+                    <li><div>{{ option }}</div></li>
+                 {% endfor %}
+            </ol>
+            <div><br>
+                <input type="text" name="voter" placeholder="Nhap ten cua ban"><br><br>
+                <label for="">Choice :</label>
+            <select name="choice" id="choice">
+                {% for option in p.options %}
+                <!-- <option value="{{ option }}">{{ option }}</option> -->
+                    <option value="{{ loop.index }}">{{ loop.index}}. {{ option }}</option> 
+                    <!-- loop.index la ham dem tu dong tang theo vong for -->
+                {% endfor %}
+            </select><br><br>
+            <button>Vote</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

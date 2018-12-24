@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Polls</title>
+    <link rel="stylesheet" href="../static/index.css">
+</head>
+<body>
+    <div id="root">
+        {% for p in polls %}
+        <!-- <a href="/poll/{{ p.code }}" class="polls"> -->
+        <a href="{{ url_for('poll', poll_code=p.code) }}" class="polls">
+            <div>
+                <h1>{{ p.question }}</h1>
+            </div>
+        </a>
+        {% endfor %}
+    </div>
+</body>
+</html>

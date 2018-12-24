@@ -1,0 +1,80 @@
+button {
+    font-size: 1.1rem; /* 1.2rem la gap doi, padding :le*/
+    /* padding : 18px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 8px;
+    padding-right: 8px; */
+    padding: 6px 10px 6px 10px;
+    border-radius: 8px;
+    background-color: rgb(16, 151, 75);
+    color: #ffffff;
+    /* chinh de chuot vao link thanh ban tay */
+    cursor: pointer;
+}
+*{
+    font-size: 1.1rem;
+}
+/* *{
+    border: 1px red dashed;
+    /* tao khung chia bo cuc
+}*/
+html,body {
+    width: 100%;
+    height: 100%;
+}
+/* #root{
+    width: 100%;
+    height: 100%;
+    /* background-color: lightblue; */
+    /* display: flex;
+    flex-flow:  column;
+    justify-content: center;
+    align-items: center;
+} */
+#root, .containter_center{
+    width: 100%;
+    height: 100%;
+    /* background-color: lightblue; */
+    display: flex;
+    flex-flow:  column;
+    justify-content: center;
+    align-items: center;
+}
+#content_wrapper{
+    display: flex;
+    flex-flow: column;
+    /* column xep doc */
+    align-items: center;
+}
+#choice_wrapper{
+    width: 33%;
+    display: flex;
+    flex-flow: row wrap;
+    /* nowrap la khong cuon */
+    justify-content: space-evenly;
+}
+.input_choice{
+    width: 40%;
+    border-radius: 3px;
+    margin: 10px 5px 5px 5px;
+}
+#btn_submit_poll{
+    margin-top: 16px;
+}
+#input_question{
+    margin-bottom: 16px;
+    width: 29%;
+    border-radius: 4px;
+}
+input{
+    border-width: 1px;
+    padding-left: 4px;
+}
+.polls{
+    padding-left: 10px;
+    border-radius: 5px;
+    border: 1.5px rgb(108, 112, 173) solid;
+    width: 25%;
+    margin: 5px;
+}
